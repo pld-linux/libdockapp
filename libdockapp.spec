@@ -66,7 +66,7 @@ Bibliotecas estáticas para desenvolvimento com libdockapp
 
 %build
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %configure
 
