@@ -1,5 +1,6 @@
 Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
+Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.4.0
 Release:	6
@@ -22,9 +23,14 @@ DockApp Making Standard Library.
 %description -l pl
 Standardowa biblioteka do tworzenia dokowalnych aplikacji.
 
+%description -l pt_BR
+Esta biblioteca provê um início básico para o desenvolvimento de
+aplicativos dock.
+
 %package devel
 Summary:	Header files etc to develop DockApps
 Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
+Summary(pt_BR):	Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
 
@@ -35,9 +41,14 @@ Header files etc to develop DockApps.
 Pliki nag³ówkowe i inne niezbêdne do tworzenia dokowalnych aplikacji w
 oparciu o tê bibliotekê.
 
+%description devel -l pt_BR
+Arquivo de cabeçalho e bibliotecas de desenvolvimento para a
+libdockapp
+
 %package static
 Summary:	Static libdockapp library
 Summary(pl):	Biblioteka statyczna libdockapp
+Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}
 
@@ -46,6 +57,9 @@ Static libdockapp library.
 
 %description static -l pl
 Biblioteka statyczna libdockapp.
+
+%description static -l pt_BR
+Bibliotecas estáticas para desenvolvimento com libdockapp
 
 %prep
 %setup -q
