@@ -14,6 +14,7 @@ BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -88,10 +89,12 @@ cp -rf examples/[br]* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p /sbin/ldconfig
+%post
+/sbin/ldconfig
 fontpostinst misc
 
-%postun	-p /sbin/ldconfig
+%postun
+/sbin/ldconfig
 fontpostinst misc
 
 %files
