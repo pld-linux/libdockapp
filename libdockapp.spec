@@ -2,17 +2,20 @@ Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
-Version:	0.4.0
-Release:	7
+Version:	0.5.0
+Release:	1
 License:	BSD
 Group:		X11/Libraries
-Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
-# Source0-md5:	6b22fbfce5e6d21ecf7dcf63db91dcaa
-URL:		http://shadowmere.student.utwente.nl/
+Source0:	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/%{name}-%{version}.tar.bz2
+# Source0-md5:	918693a30bdff72e629ef8b85a3f6779
+Patch0:		%{name}-Makefile.patch
+URL:		http://solfertje.student.utwente.nl/~dalroi/libdockapp/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	docklib
 
@@ -62,38 +65,47 @@ Biblioteka statyczna libdockapp.
 Bibliotecas estáticas para desenvolvimento com libdockapp
 
 %prep
-%setup -q
+%setup -q -n dockapp
+%patch0 -p1
 
 %build
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%configure
+%configure 
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+cp -rf examples/[br]* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
+fontpostinst misc
+
 %postun	-p /sbin/ldconfig
+fontpostinst misc
 
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
+%{_fontsdir}/misc/*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
 %{_includedir}/*
+%{_examplesdir}/%name-%{version}
 
 %files static
 %defattr(644,root,root,755)
