@@ -3,8 +3,8 @@ Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.4.0
-Release:	6
-License:	distributable
+Release:	7
+License:	BSD
 Group:		X11/Libraries
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 URL:		http://shadowmere.student.utwente.nl/
