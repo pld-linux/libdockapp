@@ -1,0 +1,38 @@
+diff -urN dockapp.orig/examples/Makefile.am dockapp/examples/Makefile.am
+--- dockapp.orig/examples/Makefile.am	2003-04-14 13:32:45.000000000 +0200
++++ dockapp/examples/Makefile.am	2004-01-10 16:19:25.000000000 +0100
+@@ -18,12 +18,12 @@
+ 
+ EXAMPLESDIR = /examples/dockapp/
+ 
+-install-data-local:
+-	$(INSTALL) -d $(SHAREDIR)$(EXAMPLESDIR)$(BASICDIR)
+-	$(INSTALL_DATA) $(BASICSRC) $(SHAREDIR)$(EXAMPLESDIR)$(BASICDIR)
++#install-data-local:
++#	$(INSTALL) -d $(SHAREDIR)$(EXAMPLESDIR)$(BASICDIR)
++#	$(INSTALL_DATA) $(BASICSRC) $(SHAREDIR)$(EXAMPLESDIR)$(BASICDIR)
+ 
+-	$(INSTALL) -d $(SHAREDIR)$(EXAMPLESDIR)$(RECTDIR)
+-	$(INSTALL_DATA) $(RECTSRC) $(SHAREDIR)$(EXAMPLESDIR)$(RECTDIR)
++#	$(INSTALL) -d $(SHAREDIR)$(EXAMPLESDIR)$(RECTDIR)
++#	$(INSTALL_DATA) $(RECTSRC) $(SHAREDIR)$(EXAMPLESDIR)$(RECTDIR)
+ 
+ #	$(INSTALL) -d $(SHAREDIR)$(EXAMPLESDIR)$(SHAPEDIR)
+ #	$(INSTALL_DATA) $(SHAPESRC) $(SHAREDIR)$(EXAMPLESDIR)$(SHAPEDIR)
+diff -urN dockapp.orig/fonts/Makefile.am dockapp/fonts/Makefile.am
+--- dockapp.orig/fonts/Makefile.am	2003-04-14 13:32:36.000000000 +0200
++++ dockapp/fonts/Makefile.am	2004-01-10 16:13:21.000000000 +0100
+@@ -5,10 +5,10 @@
+ #	but I don't know how and they don't tell.
+ #
+ 
+-XFONTDIR = $(DESTDIR)/usr/X11R6/lib/X11/fonts
++XFONTDIR = $(DESTDIR)/usr/share/fonts
+ 
+-MYFONTDIR = /dockapp
+-MYDATA = luxel-ascii-06x09.pcf.gz seg7-ascii-05x07.pcf.gz fonts.dir fonts.alias
++MYFONTDIR = /misc
++MYDATA = luxel-ascii-06x09.pcf.gz seg7-ascii-05x07.pcf.gz 
+ 
+ install-data-local:
+ 	$(INSTALL) -d $(XFONTDIR)$(MYFONTDIR)
