@@ -15,7 +15,6 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	docklib
 
-%define 	_prefix 	/usr/X11R6
 
 %description
 DockApp Making Standard Library.
