@@ -16,7 +16,6 @@ BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	docklib
 
-
 %description
 DockApp Making Standard Library.
 
@@ -33,6 +32,7 @@ Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	XFree86-devel
 
 %description devel
 Header files etc to develop DockApps.
@@ -75,7 +75,8 @@ Bibliotecas estáticas para desenvolvimento com libdockapp
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
