@@ -6,7 +6,7 @@ Release:	1
 License:	distributable
 Group:		X11/Libraries
 Group(pl):	X11/Biblioteki
-Source:		ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
+Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 URL:		http://shadowmere.student.utwente.nl/
 BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
@@ -32,8 +32,8 @@ Requires:	%{name} = %{version}
 Header files etc to develop DockApps.
 
 %description -l pl devel
-Pliki nag³ówkowe i inne niezbêdne do tworzenia dokowalnych aplikacji
-w oparciu o tê bibliotekê.
+Pliki nag³ówkowe i inne niezbêdne do tworzenia dokowalnych aplikacji w
+oparciu o tê bibliotekê.
 
 %package static
 Summary:	Static libdockapp library
@@ -84,4 +84,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/*
 
 %files static
-%attr(644,root,root) %{_libdir}/libdockapp.a
+%defattr(644,root,root,755)
+%{_libdir}/libdockapp.a
