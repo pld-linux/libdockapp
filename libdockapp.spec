@@ -2,9 +2,10 @@ Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Name:		libdockapp
 Version:	0.4.0
-Release:	1
-License:	distributable
+Release:	2
+License:	Distributable
 Group:		X11/Libraries
+Group(de):	X11/Libraries
 Group(pl):	X11/Biblioteki
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 URL:		http://shadowmere.student.utwente.nl/
@@ -25,6 +26,7 @@ Standardowa biblioteka do tworzenia dokowalnych aplikacji.
 Summary:	Header files etc to develop DockApps
 Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
 Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 
@@ -39,6 +41,7 @@ oparciu o tê bibliotekê.
 Summary:	Static libdockapp library
 Summary(pl):	Biblioteka statyczna libdockapp
 Group:		X11/Development/Libraries
+Group(de):	X11/Entwicklung/Libraries
 Group(pl):	X11/Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 
@@ -52,7 +55,6 @@ Biblioteka statyczna libdockapp.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 
 %{__make}
@@ -61,8 +63,6 @@ LDFLAGS="-s"; export LDFLAGS
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf README AUTHORS NEWS ChangeLog
 
