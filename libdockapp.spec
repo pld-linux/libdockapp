@@ -11,7 +11,7 @@ URL:		http://shadowmere.student.utwente.nl/
 BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
 Obsoletes:	docklib
-BuildRoot:   	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix 	/usr/X11R6
 
