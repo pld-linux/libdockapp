@@ -7,6 +7,7 @@ Release:	7
 License:	BSD
 Group:		X11/Libraries
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
+# Source0-md5:	6b22fbfce5e6d21ecf7dcf63db91dcaa
 URL:		http://shadowmere.student.utwente.nl/
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
