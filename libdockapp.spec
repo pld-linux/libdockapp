@@ -2,7 +2,7 @@ Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Name:		libdockapp
 Version:	0.4.0
-Release:	4
+Release:	5
 License:	Distributable
 Group:		X11/Libraries
 Group(de):	X11/Libraries
@@ -55,6 +55,9 @@ Biblioteka statyczna libdockapp.
 %setup -q
 
 %build
+libtoolize --copy --force
+aclocal
+autoconf
 %configure
 
 %{__make}
