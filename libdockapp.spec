@@ -31,7 +31,7 @@ Requires:	%{name} = %{version}
 %description devel
 Header files etc to develop DockApps.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i inne niezbêdne do tworzenia dokowalnych aplikacji w
 oparciu o tê bibliotekê.
 
@@ -44,7 +44,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static libdockapp library.
 
-%description -l pl static
+%description static -l pl
 Biblioteka statyczna libdockapp.
 
 %prep
