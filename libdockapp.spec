@@ -2,17 +2,16 @@ Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Name:		libdockapp
 Version:	0.4.0
-Release:	2
+Release:	3
 License:	Distributable
 Group:		X11/Libraries
 Group(de):	X11/Libraries
 Group(pl):	X11/Biblioteki
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 URL:		http://shadowmere.student.utwente.nl/
-BuildRequires:	xpm-devel
 BuildRequires:	XFree86-devel
-Obsoletes:	docklib
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	docklib
 
 %define 	_prefix 	/usr/X11R6
 
