@@ -2,10 +2,11 @@ Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Name:		libdockapp
 Version:	0.4.0
-Release:	3
+Release:	4
 License:	Distributable
 Group:		X11/Libraries
 Group(de):	X11/Libraries
+Group(es):	X11/Bibliotecas
 Group(pl):	X11/Biblioteki
 Source0:	ftp://shadowmere.student.utwente.nl/pub/WindowMaker/%{name}-%{version}.tar.gz
 URL:		http://shadowmere.student.utwente.nl/
