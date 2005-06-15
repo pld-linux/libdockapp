@@ -1,3 +1,4 @@
+%bcond_without	static_libs	# don't build static library
 Summary:	DockApp Making Standard Library
 Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
@@ -73,7 +74,8 @@ Bibliotecas estáticas para desenvolvimento com libdockapp
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
-%configure 
+%configure \
+	%{!?with_static_libs:--disable-static}
 
 %{__make}
 
@@ -110,6 +112,8 @@ fontpostinst misc
 %{_includedir}/*
 %{_examplesdir}/%name-%{version}
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libdockapp.a
+%endif
