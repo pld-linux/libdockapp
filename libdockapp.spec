@@ -6,7 +6,7 @@ Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.5.0
-Release:	2
+Release:	3
 License:	BSD
 Group:		X11/Libraries
 Source0:	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/%{name}-%{version}.tar.bz2
@@ -40,7 +40,7 @@ Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	XFree86-devel
+Requires:	xorg-lib-libXpm-devel
 
 %description devel
 Header files etc to develop DockApps.
