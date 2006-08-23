@@ -39,7 +39,7 @@ Summary:	Header files etc to develop DockApps
 Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
 Summary(pt_BR):	Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXpm-devel
 
 %description devel
@@ -58,7 +58,7 @@ Summary:	Static libdockapp library
 Summary(pl):	Biblioteka statyczna libdockapp
 Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com libdockapp
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdockapp library.
