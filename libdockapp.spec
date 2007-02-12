@@ -2,8 +2,8 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	DockApp Making Standard Library
-Summary(pl):	Biblioteka do tworzenia dokowalnych aplikacji
-Summary(pt_BR):	Biblioteca para desenvolver aplicativos dock
+Summary(pl.UTF-8):   Biblioteka do tworzenia dokowalnych aplikacji
+Summary(pt_BR.UTF-8):   Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.5.0
 Release:	3
@@ -27,17 +27,17 @@ Obsoletes:	docklib
 %description
 DockApp Making Standard Library.
 
-%description -l pl
+%description -l pl.UTF-8
 Standardowa biblioteka do tworzenia dokowalnych aplikacji.
 
-%description -l pt_BR
-Esta biblioteca provê um início básico para o desenvolvimento de
+%description -l pt_BR.UTF-8
+Esta biblioteca provÃª um inÃ­cio bÃ¡sico para o desenvolvimento de
 aplicativos dock.
 
 %package devel
 Summary:	Header files etc to develop DockApps
-Summary(pl):	Pliki nag³ówkowe i inne do tworzenia dokowalnych aplikacji
-Summary(pt_BR):	Arquivos de desenvolvimento para a libdockapp
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i inne do tworzenia dokowalnych aplikacji
+Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXpm-devel
@@ -45,29 +45,29 @@ Requires:	xorg-lib-libXpm-devel
 %description devel
 Header files etc to develop DockApps.
 
-%description devel -l pl
-Pliki nag³ówkowe i inne niezbêdne do tworzenia dokowalnych aplikacji w
-oparciu o tê bibliotekê.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i inne niezbÄ™dne do tworzenia dokowalnych aplikacji w
+oparciu o tÄ™ bibliotekÄ™.
 
-%description devel -l pt_BR
-Arquivo de cabeçalho e bibliotecas de desenvolvimento para a
+%description devel -l pt_BR.UTF-8
+Arquivo de cabeÃ§alho e bibliotecas de desenvolvimento para a
 libdockapp
 
 %package static
 Summary:	Static libdockapp library
-Summary(pl):	Biblioteka statyczna libdockapp
-Summary(pt_BR):	Bibliotecas estáticas para desenvolvimento com libdockapp
+Summary(pl.UTF-8):   Biblioteka statyczna libdockapp
+Summary(pt_BR.UTF-8):   Bibliotecas estÃ¡ticas para desenvolvimento com libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdockapp library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka statyczna libdockapp.
 
-%description static -l pt_BR
-Bibliotecas estáticas para desenvolvimento com libdockapp
+%description static -l pt_BR.UTF-8
+Bibliotecas estÃ¡ticas para desenvolvimento com libdockapp
 
 %prep
 %setup -q -n dockapp
