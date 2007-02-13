@@ -2,8 +2,8 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	DockApp Making Standard Library
-Summary(pl.UTF-8):   Biblioteka do tworzenia dokowalnych aplikacji
-Summary(pt_BR.UTF-8):   Biblioteca para desenvolver aplicativos dock
+Summary(pl.UTF-8):	Biblioteka do tworzenia dokowalnych aplikacji
+Summary(pt_BR.UTF-8):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.5.0
 Release:	3
@@ -36,8 +36,8 @@ aplicativos dock.
 
 %package devel
 Summary:	Header files etc to develop DockApps
-Summary(pl.UTF-8):   Pliki nagłówkowe i inne do tworzenia dokowalnych aplikacji
-Summary(pt_BR.UTF-8):   Arquivos de desenvolvimento para a libdockapp
+Summary(pl.UTF-8):	Pliki nagłówkowe i inne do tworzenia dokowalnych aplikacji
+Summary(pt_BR.UTF-8):	Arquivos de desenvolvimento para a libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libXpm-devel
@@ -55,8 +55,8 @@ libdockapp
 
 %package static
 Summary:	Static libdockapp library
-Summary(pl.UTF-8):   Biblioteka statyczna libdockapp
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas para desenvolvimento com libdockapp
+Summary(pl.UTF-8):	Biblioteka statyczna libdockapp
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com libdockapp
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
