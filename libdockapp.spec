@@ -6,12 +6,12 @@ Summary:	DockApp Making Standard Library
 Summary(pl.UTF-8):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR.UTF-8):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
-Version:	0.5.0
-Release:	5
+Version:	0.6.2
+Release:	1
 License:	BSD
 Group:		X11/Libraries
 Source0:	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/%{name}-%{version}.tar.bz2
-# Source0-md5:	918693a30bdff72e629ef8b85a3f6779
+# Source0-md5:	05a9a5f295d956397e6bb53bad3a0322
 Patch0:		%{name}-Makefile.patch
 URL:		http://solfertje.student.utwente.nl/~dalroi/libdockapp/
 BuildRequires:	autoconf
@@ -71,7 +71,7 @@ Biblioteka statyczna libdockapp.
 Bibliotecas estáticas para desenvolvimento com libdockapp
 
 %prep
-%setup -q -n dockapp
+%setup -q
 %patch0 -p1
 
 %build
