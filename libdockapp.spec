@@ -7,7 +7,7 @@ Summary(pl.UTF-8):	Biblioteka do tworzenia dokowalnych aplikacji
 Summary(pt_BR.UTF-8):	Biblioteca para desenvolver aplicativos dock
 Name:		libdockapp
 Version:	0.6.2
-Release:	1
+Release:	2
 License:	BSD
 Group:		X11/Libraries
 Source0:	http://solfertje.student.utwente.nl/~dalroi/libdockapp/files/%{name}-%{version}.tar.bz2
