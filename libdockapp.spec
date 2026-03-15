@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	static_libs	# don't build static library
+%bcond_without	static_libs	# static library
 #
 Summary:	DockApp Making Standard Library
 Summary(pl.UTF-8):	Biblioteka do tworzenia dokowalnych aplikacji
@@ -24,8 +24,8 @@ BuildRequires:	xorg-lib-libXpm-devel
 Requires(post,postun):	/sbin/ldconfig
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
+Obsoletes:	docklib < 0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Obsoletes:	docklib
 
 %description
 DockApp Making Standard Library.
