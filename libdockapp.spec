@@ -114,13 +114,14 @@ fontpostinst misc
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog
-%attr(755,root,root) %{_libdir}/libdockapp.so.*.*.*
+%{_libdir}/libdockapp.so.*.*.*
 %ghost %{_libdir}/libdockapp.so.3
-%{_fontsdir}/misc/*.pcf.gz
+%{_fontsdir}/misc/luxel-ascii-*.pcf.gz
+%{_fontsdir}/misc/seg7-ascii-*.pcf.gz
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libdockapp.so
+%{_libdir}/libdockapp.so
 %{_libdir}/libdockapp.la
 %{_includedir}/libdockapp
 %{_pkgconfigdir}/dockapp.pc
